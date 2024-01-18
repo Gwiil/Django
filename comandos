@@ -1,0 +1,24 @@
+python manage.py createsuperuser  --- criar admin
+python manage.py runserver -- inciar o servidor
+python manage.py migrate -- atualizar banco
+python manage.py makemigrates -- atualizar
+django-admin startapp filme -- criar novo app
+
+Caso seu site tenha um usuario personalizado, não esqueça de criar ele antes de rodar
+um makemigrates.
+no models do app faça isso:
+
+from django.contrib.auth.models import AbstractUser
+class Usuario(AbstractUser):
+    pass
+e no setting em #Password validation:
+AUTH_USER_MODEL = "filme.Usuario"
+
+
+
+
+pips:
+pip install django, django-crispy-forms, crispy-bootstrap5,
+
+
+
