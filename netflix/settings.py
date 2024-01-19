@@ -31,7 +31,7 @@ else:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["django-production-6132.up.railway.app", 'localhost', '127.0.0.1']
 
@@ -101,7 +101,7 @@ DATABASES = {
 import dj_database_url
 
 
-DATABASE_URL = "postgresql://postgres:DF1F*eaC2e32D6142Ef1bE*EF34bdFAf@viaduct.proxy.rlwy.net:25572/railway"
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 if DATABASE_URL:
     DATABASES = {
